@@ -1,6 +1,15 @@
 .background {
     -fx-background-color: #373737;
 }
+.temperature {
+    -fx-background-color: #F0F000;
+}
+.heartbeat {
+    -fx-background-color: #0FF000;
+}
+.accelerometer {
+    -fx-background-color: #00FF00;
+}
 
 .text-area .content {
     -fx-background-color: darkgrey;
@@ -40,8 +49,13 @@ Button:pressed, Button:default:hover:pressed {
 
 .chart {
     -fx-padding: 2px;
+    
 }
 .chart-content {
     -fx-padding: 4px;
-
+    -fx-background-color: #373737;
+}
+.axis-label {
+    -fx-text-fill: #FFFFFF;
+    -fx-padding: 4px;
 }

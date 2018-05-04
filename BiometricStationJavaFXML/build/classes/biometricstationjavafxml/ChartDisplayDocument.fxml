@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
 <?import javafx.scene.chart.LineChart?>
 <?import javafx.scene.chart.NumberAxis?>
 <?import javafx.scene.control.Button?>
@@ -12,9 +7,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="529.0" prefWidth="966.0" styleClass="background" stylesheets="@StyleChatClient.css" xmlns:fx="http://javafx.com/fxml/1" fx:controller="biometricstationjavafxml.ChartDisplayDocumentController">
+<AnchorPane id="AnchorPane" prefHeight="627.0" prefWidth="1023.0" styleClass="background" stylesheets="@StyleChatClient.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="biometricstationjavafxml.ChartDisplayDocumentController">
 <children>
-      <LineChart fx:id="accelerometer" layoutX="646.0" layoutY="197.0" prefHeight="200.0" prefWidth="300.0">
+      <LineChart fx:id="accelerometer" alternativeColumnFillVisible="true" createSymbols="false" layoutX="697.0" layoutY="199.0" legendVisible="false" prefHeight="230.0" prefWidth="300.0" stylesheets="@StyleChatClient.css">
         <xAxis>
           <NumberAxis side="BOTTOM" />
         </xAxis>
@@ -22,7 +17,7 @@
           <NumberAxis side="LEFT" />
         </yAxis>
       </LineChart>
-      <LineChart fx:id="temperature" layoutX="25.0" layoutY="197.0" prefHeight="200.0" prefWidth="300.0">
+      <LineChart fx:id="temperature" alternativeColumnFillVisible="true" createSymbols="false" layoutX="25.0" layoutY="197.0" legendVisible="false" prefHeight="230.0" prefWidth="300.0" verticalGridLinesVisible="false">
          <xAxis>
             <NumberAxis side="BOTTOM" />
          </xAxis>
@@ -30,7 +25,7 @@
             <NumberAxis side="LEFT" />
          </yAxis>
       </LineChart>
-      <LineChart fx:id="heartbeat" layoutX="351.0" layoutY="321.0" prefHeight="200.0" prefWidth="300.0">
+      <LineChart fx:id="heartbeat" alternativeColumnFillVisible="true" createSymbols="false" layoutX="362.0" layoutY="323.0" legendVisible="false" prefHeight="230.0" prefWidth="300.0">
          <xAxis>
             <NumberAxis side="BOTTOM" />
          </xAxis>
@@ -38,23 +33,26 @@
             <NumberAxis side="LEFT" />
          </yAxis>
       </LineChart>
-      <Button fx:id="generateRandomData" layoutX="408.0" layoutY="146.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="185.0" text="CLICK ME!!!" textFill="#96a3a8" />
-      <Label contentDisplay="CENTER" layoutX="388.0" layoutY="27.0" prefHeight="65.0" prefWidth="225.0" stylesheets="@../../../../oop2/mqtt-chat-exeler/FxmlMqttChatClient/src/fxmlmqttchatclient/StyleChatClient.css" text="Chart Display" textAlignment="CENTER" textFill="#96a3a8">
+      <Button fx:id="generateRandomData" alignment="CENTER" layoutX="450.0" layoutY="131.0" mnemonicParsing="false" onAction="#generateRandomDataHandler" prefHeight="56.0" prefWidth="185.0" text="CLICK ME!!!" textFill="#e2e2e2">
+         <font>
+            <Font size="18.0" />
+         </font></Button>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="392.0" layoutY="32.0" prefHeight="65.0" prefWidth="300.0" stylesheets="@../../../../oop2/mqtt-chat-exeler/FxmlMqttChatClient/src/fxmlmqttchatclient/StyleChatClient.css" text="Chart Display" textAlignment="CENTER" textFill="#e2e2e2" underline="true">
          <font>
             <Font name="Rockwell" size="27.0" />
          </font>
       </Label>
-      <Label layoutX="82.0" layoutY="136.0" prefHeight="46.0" prefWidth="185.0" text="Temperature:" textFill="#96a3a8">
+      <Label alignment="CENTER" layoutX="85.0" layoutY="136.0" prefHeight="46.0" prefWidth="240.0" text="Temperature:" textAlignment="CENTER" textFill="#e2e2e2">
          <font>
             <Font size="22.0" />
          </font>
       </Label>
-      <Label layoutX="425.0" layoutY="265.0" prefHeight="46.0" prefWidth="152.0" text="Heartbeat:" textFill="#96a3a8">
+      <Label alignment="CENTER" layoutX="422.0" layoutY="266.0" prefHeight="46.0" prefWidth="240.0" text="Heartbeat:" textAlignment="CENTER" textFill="#e2e2e2">
          <font>
             <Font size="22.0" />
          </font>
       </Label>
-      <Label layoutX="697.0" layoutY="136.0" prefHeight="46.0" prefWidth="199.0" text="Accelerometer:" textFill="#96a3a8">
+      <Label alignment="CENTER" layoutX="757.0" layoutY="136.0" prefHeight="46.0" prefWidth="240.0" text="Accelerometer:" textAlignment="CENTER" textFill="#e2e2e2">
          <font>
             <Font size="22.0" />
          </font>

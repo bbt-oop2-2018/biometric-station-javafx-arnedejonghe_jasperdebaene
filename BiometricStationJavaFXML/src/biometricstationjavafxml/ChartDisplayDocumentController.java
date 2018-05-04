@@ -42,7 +42,7 @@ private int xValue = 0;
     @FXML
     private void generateRandomDataHandler(ActionEvent event) {
 
-        System.out.println("You clicked me!");
+        System.out.println("You clicked me! (btw, Arne is a smart guy!");
 
         //Temperature
         temperatureValues.getData().add(new XYChart.Data(xValue, dataGenerator.generate()));
@@ -60,8 +60,9 @@ private int xValue = 0;
 
         //dataGenerator
         dataGenerator = new RandomNumberGenerator(MINIMUM_VALUE, MAXIMUM_VALUE);
-
+        
         //Temperature
+        temperature.setLegendVisible(false);
         temperatureValues = new XYChart.Series();
 
         // Add series to chart
@@ -71,15 +72,17 @@ private int xValue = 0;
         temperature.getXAxis().setLabel("Measurement");
 
         //Heartbeat
+        heartbeat.setLegendVisible(false);
         heartbeatValues = new XYChart.Series();
 
         // Add series to chart
         heartbeat.getData().add(heartbeatValues);
         //Set Axis
-        heartbeat.getYAxis().setLabel("heartbeat [beats/second]");
+        heartbeat.getYAxis().setLabel("heartbeat [beats/sec]");
         heartbeat.getXAxis().setLabel("Measurement");
 
         //Accelerometer
+        accelerometer.setLegendVisible(false);
         accelerometerValues = new XYChart.Series();
 
         // add series to chart
@@ -88,5 +91,6 @@ private int xValue = 0;
         accelerometer.getYAxis().setLabel("accelerometer [m/s2]");
         accelerometer.getXAxis().setLabel("Measurement");
     }  
+        
     
 }
