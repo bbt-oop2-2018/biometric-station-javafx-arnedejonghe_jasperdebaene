@@ -8,7 +8,8 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="BiometricStationJavaFXML.jar" size="5390" download="eager" />
+    <jar href="BiometricStationJavaFXML.jar" size="10364" download="eager" />
+    <jar href="lib\org.eclipse.paho.client.mqttv3-1.2.0.jar" size="202925" download="eager" />
   </resources>
   <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="BiometricStationJavaFXML" >
     <param name="requiredFXVersion" value="8.0+"/>

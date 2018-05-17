@@ -12,29 +12,6 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
-import javafx.scene.input.KeyCode;
-import javafx.scene.input.KeyEvent;
-import javafx.stage.Stage;
-
-/**
- *
- * @author Jasper
- */
-
-package fxmlmqttchatclient;
-
-import be.vives.oop.mqtt.chatservice.IMqttMessageHandler;
-import be.vives.oop.mqtt.chatservice.MqttChatService;
-import java.net.URL;
-import java.util.ResourceBundle;
-import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
-import javafx.scene.input.KeyCode;
-import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
 
 public class Controller implements Initializable, IMqttMessageHandler {
@@ -63,7 +40,7 @@ public class Controller implements Initializable, IMqttMessageHandler {
     }
 
     // This method is called if a chat message is received from mqtt
-    @Override
+   
     public void messageArrived(String channel, String message) {
         conversation.appendText(message + "\n");
         System.out.println("Received chat message (on channel = " + channel

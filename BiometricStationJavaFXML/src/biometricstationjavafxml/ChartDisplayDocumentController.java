@@ -13,7 +13,6 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.chart.LineChart;
 import javafx.scene.chart.XYChart;
-import javafx.scene.control.Label;
 
 /**
  *
@@ -37,7 +36,9 @@ private int xValue = 0;
 
     @FXML
     private LineChart accelerometer;
-    private XYChart.Series accelerometerValues;
+    private XYChart.Series accelerometerValueX;
+    private XYChart.Series accelerometerValueY;
+    private XYChart.Series accelerometerValueZ;
 
     @FXML
     private void generateRandomDataHandler(ActionEvent event) {
@@ -51,7 +52,9 @@ private int xValue = 0;
         heartbeatValues.getData().add(new XYChart.Data(xValue, dataGenerator.generate()));
 
         //accelerometer
-        accelerometerValues.getData().add(new XYChart.Data(xValue, dataGenerator.generate()));
+        accelerometerValueX.getData().add(new XYChart.Data(xValue, dataGenerator.generate()));
+        accelerometerValueY.getData().add(new XYChart.Data(xValue, dataGenerator.generate()));
+        accelerometerValueZ.getData().add(new XYChart.Data(xValue, dataGenerator.generate()));
         xValue++;
     }
 
@@ -83,10 +86,17 @@ private int xValue = 0;
 
         //Accelerometer
         accelerometer.setLegendVisible(false);
-        accelerometerValues = new XYChart.Series();
+        accelerometerValueX = new XYChart.Series();
+        accelerometerValueX.setName("X-Value");
+        accelerometerValueY = new XYChart.Series();
+        accelerometerValueY.setName("Y-Value");
+        accelerometerValueZ = new XYChart.Series();
+        accelerometerValueZ.setName("Z-Value");
 
         // add series to chart
-        accelerometer.getData().add(accelerometerValues);
+        accelerometer.getData().add(accelerometerValueX);
+        accelerometer.getData().add(accelerometerValueY);
+        accelerometer.getData().add(accelerometerValueZ);
         //Set Axis
         accelerometer.getYAxis().setLabel("accelerometer [m/s2]");
         accelerometer.getXAxis().setLabel("Measurement");
